@@ -12,8 +12,6 @@
 
 <h2>Will you love me forever? 😘</h2>
 
-<p id="countdown"></p>
-
 <button onclick="showLove()">YES MY ATCHU 💖</button>
 <button id="noBtn" onmouseover="moveButton()">No 😜</button>
 
@@ -31,16 +29,6 @@
 </div>
 
 <script>
-  const today = new Date();
-  let target = new Date(today.getFullYear(), 9, 26);
-
-  if(today > target){
-    target.setFullYear(today.getFullYear() + 1);
-  }
-
-  const diff = Math.ceil((target - today) / (1000*60*60*24));
-  document.getElementById("countdown").innerHTML =
-    "🎉 " + diff + " days left for Oct 26 💖";
 
   function showLove(){
     document.getElementById("loveMessage").style.display = "block";
