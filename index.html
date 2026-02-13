@@ -39,7 +39,7 @@
   </button>
 </div>
 
-  <div id="memorySection" class="screen";">
+  <div id="memorySection" class="screen"">
 
       <h3> Umma😘</h3>
       <h2>Do you need any other gift other than me😜 </h2>
@@ -61,7 +61,7 @@
 function checkPassword(){
     const input = document.getElementById("passwordInput").value;
     if(input === correctPassword){
-        document.getElementById("paswordScreen").style.display = "none";
+        document.getElementById("passwordScreen").style.display = "none";
         document.getElementById("firstScreen").style.display = "none";
         
     } else {
@@ -84,12 +84,9 @@ function checkPassword(){
     switchScreen("loveMessage","memorySection");
     document.getElementById("vid1").play();
 }
-funtion switchscreen(hide,show){
-  document.getElementById(hide).classList.remove("active");
-  setTimeout(() => {
+function switchScreen(hide, show){
     document.getElementById(hide).classList.remove("active");
-  }, 600);
-  
+    document.getElementById(show).classList.add("active");
 }
 
   /* Floating Hearts Generator */
