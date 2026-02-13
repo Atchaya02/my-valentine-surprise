@@ -61,7 +61,8 @@
 function checkPassword(){
     const input = document.getElementById("passwordInput").value;
     if(input === correctPassword){
-        switchScreen("passwordScreen","loveScreen");
+        switchScreen("passwordScreen","firstScreen");
+      document.getElementById("passwordScreen").style.display = "none";
         
     } else {
         alert("Wrong password 😜 Try again!");
@@ -110,7 +111,7 @@ body {
     overflow: hidden;
     font-family: Arial, sans-serif;
     text-align: center;
-    color: white;
+    color: red;
     background: linear-gradient(135deg, #ff4e8b, #ff8fab);
 }
 
