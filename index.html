@@ -8,11 +8,11 @@
 <body>
 
 <h1>❤️ Hey Gundus ❤️</h1>
-<h3> June 10… my forever day 💕</h3>
+<h3> Happy Valentine's day 💕</h3>
 
 <h2>Will you love me forever? 😘</h2>
 
-<button onclick="showLove()">YES MY ATCHU 💖</button>
+<button onclick="showLove()">Yes drlng 💖</button>
 <button id="noBtn" onmouseover="moveButton()">No 😜</button>
 
 <div id="loveMessage" style="display:none;">
@@ -24,6 +24,26 @@
     Chinna chinna kan asaivil la kooda<br>
     naan un kitta dhan iruken 💖
   </p>
+
+  <button onclick="showMemories()" class="memory-btn">
+    💖 Click To See Our Memories 💖
+  </button>
+
+  <div id="memorySection" style="display:none; margin-top:30px;">
+
+      <h3>Our Beautiful Moments 🎥</h3>
+
+      <video width="300" controls id="vid1">
+          <source src="video1.mp4" type="video/mp4">
+      </video>
+
+      <br><br>
+
+      <video width="300" controls id="vid2">
+          <source src="video2.mp4" type="video/mp4">
+      </video>
+
+      <br><br>
 
   <h3>I Love You Forever ❤️</h3>
 </div>
@@ -40,6 +60,12 @@
     btn.style.left = Math.random()*300 + "px";
     btn.style.top = Math.random()*400 + "px";
   }
+  function showMemories(){
+  document.getElementById("memorySection").style.display = "block";
+
+  document.getElementById("vid1").play();
+  document.getElementById("vid2").play();
+}
 </script>
 
 <style>
@@ -58,6 +84,16 @@ button {
   border-radius: 10px;
   border: none;
   cursor: pointer;
+}
+  .memory-btn {
+  background-color: #ff0055;
+  padding: 15px 25px;
+  font-size: 18px;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
 }
 </style>
 
