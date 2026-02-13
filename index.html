@@ -88,7 +88,14 @@ function checkPassword(){
   }
   function showMemories(){
     switchScreen("loveMessage","memorySection");
-    document.getElementById("vid1").play();
+    const music = document.getElementById("bgMusic");
+    const video = document.getElementById("vid1");
+
+    // Pause background music
+    music.pause();
+
+    // Play video
+    video.play();
 }
 function switchScreen(hide, show){
     document.getElementById(hide).classList.remove("active");
@@ -111,6 +118,7 @@ function createHeart(){
 }
 
 setInterval(createHeart, 400);
+  document.getElementById("bgMusic").volume = 0.4;
 </script>
 
 <style>
@@ -173,6 +181,7 @@ input {
     border: none;
     text-align: center;
 }
+  
 </style>
 <audio id="bgMusic" loop>
     <source src="videos/music.mp3" type="audio/mp3">
