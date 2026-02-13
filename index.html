@@ -30,6 +30,7 @@
   <button onclick="showMemories()" class="memory-btn">
     💖 Click me 💖
   </button>
+</div>
 
   <div id="memorySection" style="display:none; margin-top:30px;">
 
@@ -64,7 +65,7 @@
     btn.style.top = Math.random()*400 + "px";
   }
   function showMemories(){
-    document.getElementById("loveScreen").style.display = "none";
+    document.getElementById("loveMessage").style.display = "none";
     document.getElementById("memorySection").style.display = "block";
   
     document.getElementById("vid1").play();
