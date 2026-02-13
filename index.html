@@ -14,7 +14,7 @@
     <button onclick="checkPassword()">Unlock 💖</button>
 </div>
 <!-- FIRST SCREEN -->
-<div id="firstScreen">
+<div id="firstScreen" class="screen">
 <h1>❤️ Hey Gundus ❤️</h1>
 <h3> Happy Valentine's day 💕</h3>
 
@@ -24,7 +24,7 @@
 <button id="noBtn" onmouseover="moveButton()">No 😜</button>
 </div>
 
-<div id="loveMessage" style="display:none;">
+<div id="loveMessage" class="screen" >
   <h2>You have no other option😜 </h2>
   <h3>best decision ever in your life ❤️</h3>
   <p>
@@ -39,7 +39,7 @@
   </button>
 </div>
 
-  <div id="memorySection" style="display:none; margin-top:30px;">
+  <div id="memorySection" class="screen";">
 
       <h3> Umma😘</h3>
       <h2>Do you need any other gift other than me😜 </h2>
@@ -59,7 +59,6 @@
   const correctPassword = "1234"; // CHANGE THIS
 
 function checkPassword(){
-  document.getElementById("firstScreen").style.display = "none";
     const input = document.getElementById("passwordInput").value;
     if(input === correctPassword){
         switchScreen("passwordScreen","firstScreen");
@@ -70,8 +69,7 @@ function checkPassword(){
 }
 
   function showLove(){
-    document.getElementById("firstScreen").style.display = "none";
-    document.getElementById("loveMessage").style.display = "block";
+    switchScreen("firstScreen","loveMessage");
     
   }
 
@@ -82,9 +80,15 @@ function checkPassword(){
     btn.style.top = Math.random()*400 + "px";
   }
   function showMemories(){
-    document.getElementById("loveMessage").style.display = "none";
-    document.getElementById("memorySection").style.display = "block";
-   document.getElementById("vid1").play();
+    switchScreen("loveMessage","memorySection");
+    document.getElementById("vid1").play();
+}
+funtion switchscreen(hide,show){
+  document.getElementById(hide).classList.remove("active");
+  setTimeout(() => {
+    document.getElementById(hide).classList.remove("active");
+  }, 600);
+  
 }
 
   /* Floating Hearts Generator */
