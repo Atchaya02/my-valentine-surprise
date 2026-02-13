@@ -9,7 +9,7 @@
 
 <!-- 🔐 Password Screen -->
 <div id="passwordScreen" class="screen active">
-    <h2>🔐 Enter Secret Password 💕</h2>
+    <h2>🔐 Guess the secret code 💕</h2>
     <input type="password" id="passwordInput" placeholder="Enter password">
     <button onclick="checkPassword()">Unlock 💖</button>
 </div>
@@ -65,9 +65,13 @@ function checkPassword(){
 
         // Show first screen
         document.getElementById("firstScreen").classList.add("active");
+      const music = document.getElementById("bgMusic");
+        music.play().catch(() => {
+            console.log("Autoplay blocked. User interaction required.");
+        });
         
     } else {
-        alert("Wrong password 😜 Try again!");
+        alert("Its a princess bday 😜 Try again chloo!");
     }
 }
 
@@ -170,6 +174,9 @@ input {
     text-align: center;
 }
 </style>
+<audio id="bgMusic" loop>
+    <source src="videos/music.mp3" type="audio/mp3">
+</audio>
 
 </body>
 </html>
