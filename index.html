@@ -61,7 +61,8 @@
 function checkPassword(){
     const input = document.getElementById("passwordInput").value;
     if(input === correctPassword){
-        switchScreen("passwordScreen","firstScreen");
+        document.getElementById("paswordScreen").style.display = "none";
+        document.getElementById("firstScreen").style.display = "none";
         
     } else {
         alert("Wrong password 😜 Try again!");
