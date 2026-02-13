@@ -6,7 +6,8 @@
 </head>
 
 <body>
-
+<!-- FIRST SCREEN -->
+<div id="firstScreen">
 <h1>❤️ Hey Gundus ❤️</h1>
 <h3> Happy Valentine's day 💕</h3>
 
@@ -14,6 +15,7 @@
 
 <button onclick="showLove()">Yes drlng 💖</button>
 <button id="noBtn" onmouseover="moveButton()">No 😜</button>
+</div>
 
 <div id="loveMessage" style="display:none;">
   <h2>You have no other option😜 </h2>
@@ -51,6 +53,7 @@
 <script>
 
   function showLove(){
+    document.getElementById("firstScreen").style.display = "none";
     document.getElementById("loveMessage").style.display = "block";
   }
 
@@ -61,10 +64,11 @@
     btn.style.top = Math.random()*400 + "px";
   }
   function showMemories(){
-  document.getElementById("memorySection").style.display = "block";
-
-  document.getElementById("vid1").play();
-  document.getElementById("vid2").play();
+    document.getElementById("loveScreen").style.display = "none";
+    document.getElementById("memorySection").style.display = "block";
+  
+    document.getElementById("vid1").play();
+    document.getElementById("vid2").play();
 }
 </script>
 
