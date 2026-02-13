@@ -28,23 +28,19 @@
   </p>
 
   <button onclick="showMemories()" class="memory-btn">
-    💖 Click me 💖
+    💖 Click to see your valentine's day gift 💖
   </button>
 </div>
 
   <div id="memorySection" style="display:none; margin-top:30px;">
 
-      <h3>Our Beautiful Moments 🎥</h3>
-
-      <video width="300" controls id="vid1">
+      <h3> Umma😘</h3>
+      <h2>Do you need any other gift rather than me😜 </h2>
+       <video width="300" controls id="vid1">
           <source src="videos/video1.mp4" type="video/mp4">
       </video>
 
       <br><br>
-
-      <video width="300" controls id="vid2">
-          <source src="videos/video2.mp4" type="video/mp4">
-      </video>
 
       <br><br>
 
@@ -56,6 +52,7 @@
   function showLove(){
     document.getElementById("firstScreen").style.display = "none";
     document.getElementById("loveMessage").style.display = "block";
+    
   }
 
   function moveButton(){
@@ -67,9 +64,7 @@
   function showMemories(){
     document.getElementById("loveMessage").style.display = "none";
     document.getElementById("memorySection").style.display = "block";
-  
-    document.getElementById("vid1").play();
-    document.getElementById("vid2").play();
+   document.getElementById("vid1").play();
 }
 </script>
 
