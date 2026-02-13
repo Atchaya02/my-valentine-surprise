@@ -61,8 +61,10 @@
 function checkPassword(){
     const input = document.getElementById("passwordInput").value;
     if(input === correctPassword){
-        document.getElementById("passwordScreen").style.display = "none";
-        document.getElementById("firstScreen").style.display = "block";
+      document.getElementById("passwordScreen").classList.remove("active");
+
+        // Show first screen
+        document.getElementById("firstScreen").classList.add("active");
         
     } else {
         alert("Wrong password 😜 Try again!");
