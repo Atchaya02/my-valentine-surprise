@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gundus ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<h1>❤️ Gundus ❤️</h1>
+<h3>From June 10… my forever day 💕</h3>
+
+<h2>Will you be mine again on Oct 26? 😘</h2>
+
+<p id="countdown"></p>
+
+<button onclick="showLove()">YES MY ATCHU 💖</button>
+<button id="noBtn" onmouseover="moveButton()">No 😜</button>
+
+<div id="loveMessage" style="display:none;">
+  <h2>En Gundus ❤️</h2>
+  <p>
+    June 10 la start aana namma story 💞<br><br>
+    Oct 26 la celebrate panna porom 😘<br><br>
+    Kadhaipoma life full ah? 🥰<br>
+    Chinna chinna kan asaivil la kooda<br>
+    naan un kitta dhan iruken 💖
+  </p>
+
+  <h3>I Love You Forever ❤️</h3>
+</div>
+
+<script>
+  const today = new Date();
+  let target = new Date(today.getFullYear(), 9, 26);
+
+  if(today > target){
+    target.setFullYear(today.getFullYear() + 1);
+  }
+
+  const diff = Math.ceil((target - today) / (1000*60*60*24));
+  document.getElementById("countdown").innerHTML =
+    "🎉 " + diff + " days left for Oct 26 💖";
+
+  function showLove(){
+    document.getElementById("loveMessage").style.display = "block";
+  }
+
+  function moveButton(){
+    const btn = document.getElementById("noBtn");
+    btn.style.position = "absolute";
+    btn.style.left = Math.random()*300 + "px";
+    btn.style.top = Math.random()*400 + "px";
+  }
+</script>
+
+<style>
+body {
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  text-align: center;
+  font-family: Arial;
+  color: white;
+  padding-top: 50px;
+}
+
+button {
+  padding: 15px 25px;
+  margin: 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+</style>
+
+</body>
+</html>
